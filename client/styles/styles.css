@@ -8,3 +8,27 @@ header h1 {
     text-align: center;
     font-family: 'Shrikhand', cursive;
 }
+
+.btn-default {
+    background: #3399ff;
+    color: #ffffff;
+}
+
+.btn-outline {
+    color: #ffffff;
+    background-color: #3399ff;
+    border: 1px solid #ffffff;
+}
+
+.btn-default:not(:disabled):hover, .btn-outline:not(:disabled):hover {
+    color: #000000;
+}
+
+.btn-default:not(:disabled):active, .btn-outline:not(:disabled):active {
+    background-color: #3399ff;
+    opacity: 0.5;
+}
+
+.btn-default:disabled, .btn-outline:disabled {
+    opacity: 0.4;
+}

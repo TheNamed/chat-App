@@ -32,3 +32,33 @@ header h1 {
 .btn-default:disabled, .btn-outline:disabled {
     opacity: 0.4;
 }
+
+.input-default {
+    background-color: #3399ff;
+    border-color: #3399ff;
+    color: #ffffff;
+    
+}
+
+.input-default[type=text] {
+    background-color: #3399ff;
+    border-color: #3399ff;
+    color: #ffffff;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+
+::placeholder {
+    color: #ffffff;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #ffffff;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #ffffff;
+}

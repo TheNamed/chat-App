@@ -10,14 +10,18 @@ header h1 {
 }
 
 .btn-default {
-    background: #3399ff;
+    background-color: #3399ff;
     color: #ffffff;
+    text-align: center;
+    font-size: 16px;
 }
 
 .btn-outline {
     color: #ffffff;
     background-color: #3399ff;
     border: 1px solid #ffffff;
+    text-align: center;
+    font-size: 16px;
 }
 
 .btn-default:not(:disabled):hover, .btn-outline:not(:disabled):hover {
@@ -41,7 +45,7 @@ header h1 {
     border: none;
     margin-top: 8px;
     margin-right: 16px;
-    font-size: 17px;
+    font-size: 16px;
 }
 
 ::placeholder {
@@ -54,4 +58,8 @@ header h1 {
 
 ::-ms-input-placeholder { /* Microsoft Edge */
     color: #3399ff;
+}
+
+a:link, a:hover, a:active, a:visited {
+    color: #ffffff;
 }

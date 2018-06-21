@@ -9,9 +9,25 @@ header h1 {
     font-family: 'Shrikhand', cursive;
 }
 
+.modal-content {
+    background-color: #3399ff;
+}
+  
+.modal-header {
+    border-bottom: 1px solid #ffffff;
+}
+
+  
+.modal-footer {
+    border-top: 1px solid #ffffff;
+}
+
 .navbar-default {
     background-color: #3399ff;
     color: #ffffff;
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
 }
 
 .btn-default {

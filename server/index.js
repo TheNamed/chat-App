@@ -5,19 +5,16 @@ const fsExtra = require('node-fs-extra');
 
 const app = express();
 
-const locationOfFile = __dirname.replace('\server', '/client');
+// This is the location of the folder on the client folder so it can copy all the files in there to public.
+const folderLocation = __dirname.replace('\server', '/client');
 
-fsExtra.copy(locationOfFile, __dirname + '/public', (err) => {
+fsExtra.copy(folderLocation, __dirname + '/public', (err) => {
   if (err) {
     console.error(err);
   }
 });
 
 app.use(express.static(__dirname + '/public'));
-
-app.get('/', (req, res) => {
-
-});
 
 app.listen(3000, () => {
   console.log('Server is now running!');

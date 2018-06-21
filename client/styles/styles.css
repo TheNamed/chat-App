@@ -9,6 +9,11 @@ header h1 {
     font-family: 'Shrikhand', cursive;
 }
 
+.navbar-default {
+    background-color: #3399ff;
+    color: #ffffff;
+}
+
 .btn-default {
     background-color: #3399ff;
     color: #ffffff;

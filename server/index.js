@@ -1,15 +1,21 @@
-var app = require('express')();
-var http = require('http').Server(app);
-var io = require('socket.io')(http);
+const express = require('express');
+const http = require('http');
+const io = require('socket.io');
+const fsExtra = require('node-fs-extra');
 
-app.get('/', function(req, res){
-  res.sendFile(__dirname + './client/index.html');
+const app = express();
+
+// This is the location of the folder on the client folder so it can copy all the files in there to public.
+const folderLocation = __dirname.replace('\server', '/client');
+
+fsExtra.copy(folderLocation, __dirname + '/public', (err) => {
+  if (err) {
+    console.error(err);
+  }
 });
 
-io.on('connection', function(socket){
-  console.log('a user connected');
-});
+app.use(express.static(__dirname + '/public'));
 
-http.listen(3000, function(){
-  console.log('listening on *:3000');
+app.listen(3000, () => {
+  console.log('Server is now running!');
 });
